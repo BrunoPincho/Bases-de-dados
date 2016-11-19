@@ -1,14 +1,13 @@
 <html>
 	<body>
-	
+	<html>
+	<body>
 
 
 
-	<form action="processareg.php"> 
-	<h3>Register and Appoint Patient</h3>
-	<p>Patient name: <input type="text" name="patient_name"/></p>
-	<p>Patient birthday: <input type="text" name="patient_birthday"/></p>
-	<p>Patient address: <input type="text" name="patient_address"/></p>
+	<form action="schedule.php"> 
+	<h3>Appointment Form</h3>
+	<p>Patient id: <input type="text" name="patient_id"/></p>
 	<p>Doctor:
 		<select name="doctor_name">
 			<?php

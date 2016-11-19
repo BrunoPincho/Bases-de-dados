@@ -22,12 +22,12 @@
 				{
 					$id = $row['doctor_id'];
 				}
-				echo $patient_id;
-				echo $id;
-				echo $date;
-				echo $office;
+				#echo $patient_id;
+				#echo $id;
+				#echo $date;
+				#echo $office;
 				$day=strftime("%A",strtotime($date));
-				echo $day;
+				#echo $day;
 				if($day== "Saturday" or $day =="Sunday" ){
 					echo("Data apontada nao e um dia util");
 					$connection = NULL;
@@ -37,7 +37,7 @@
 				
 					$sql = "INSERT INTO appointment VALUES ('$patient_id','$id', '$date','$office')";
 					$nrows = $connection->exec($sql);
-					echo("<p>Rows inserted: $nrows</p>");
+					echo("<p>$nrows consulta marcada com sucesso</p>");
 
 				}
 	#$sql = "SELECT max(patient_id) FROM patient";
@@ -46,6 +46,11 @@
 	
 	
 ?>
+
+	<form>
+		<input type="button" value="RETURN" onclick="window.location.href='http://web.ist.utl.pt/ist175346/form.php'" />
+	</form>
+
 </body>
 
 
